@@ -1,10 +1,10 @@
-# Universidad [Nombre de la Universidad]  
-## Facultad de [Nombre de la Facultad]  
-### Carrera de [Nombre de la Carrera]  
+# Universidad [Universidad Técnica de Ambato]  
+## Facultad de [FISE]  
+### Carrera de [Software]  
 
 **Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** ___________________________  
-**Fecha:** ___________________  
+**Nombre del Estudiante:** Luis Sebastian Miranda Tarupi 
+**Fecha:** 08/04/2026  
 
 ---
 
@@ -84,7 +84,11 @@ Esto mostró la siguiente información:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
+**Función del archivo `.gitignore`:**
+El archivo `.gitignore` le indica a Git qué archivos o directorios no deben ser rastreados ni subidos al repositorio. Es fundamental para evitar subir archivos temporales, logs, credenciales sensibles o carpetas generadas automáticamente (como `node_modules/` o `temp/`).
+**Evidencia:**
+Al ejecutar `git status` después de crear los archivos, Git solo rastreó `prueba.md` y `prueba.txt` en la raíz. Los archivos `prueba.log`, la carpeta `temp/` y los archivos dentro de `doc/` fueron completamente ignorados, cumpliendo con las reglas establecidas. 
+![Evidencia .gitignore](imagenes/imagen4.png)
 
 ---
 
@@ -114,7 +118,15 @@ Esto mostró la siguiente información:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+**Comandos utilizados:**
+Debido a que la extensión git-flow no estaba disponible en el entorno local, se realizó el flujo manual siguiendo el modelo de Git Flow:
+1. `git checkout -b develop` (Creación de rama de desarrollo).
+2. `git checkout -b feature/ingresar-encabezado` (Rama aislada para la tarea).
+3. `git add` y `git commit` (Persistencia de cambios).
+4. `git checkout develop` y `git merge feature/ingresar-encabezado` (Integración de la funcionalidad).
+
+**Reflexión sobre Git Flow:**
+Git Flow es una metodología excelente para proyectos de larga duración porque establece un orden jerárquico. La rama `main` siempre es código estable, mientras que `develop` es el campo de juego para integrar nuevas funciones. Esto evita que errores en funciones experimentales afecten al usuario final o al código que ya funciona.
 
 ---
 
