@@ -124,6 +124,7 @@ Debido a que la extensión git-flow no estaba disponible en el entorno local, se
 2. `git checkout -b feature/ingresar-encabezado` (Rama aislada para la tarea).
 3. `git add` y `git commit` (Persistencia de cambios).
 4. `git checkout develop` y `git merge feature/ingresar-encabezado` (Integración de la funcionalidad).
+![Comandos manuales](imagenes/imagen10.png)
 
 **Reflexión sobre Git Flow:**
 Git Flow es una metodología excelente para proyectos de larga duración porque establece un orden jerárquico. La rama `main` siempre es código estable, mientras que `develop` es el campo de juego para integrar nuevas funciones. Esto evita que errores en funciones experimentales afecten al usuario final o al código que ya funciona.
@@ -156,8 +157,15 @@ Git Flow es una metodología excelente para proyectos de larga duración porque 
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+**Parte teórica:**
+* **¿Qué es un PR?** Es una propuesta para integrar cambios de una rama a otra. En entornos colaborativos, permite que otros revisen el código antes de que este se vuelva parte definitiva del proyecto.
+* **Importancia de la revisión:** Permite detectar errores, asegurar que se sigan los estándares del equipo y evitar que el código nuevo rompa funciones existentes.
+* **Validaciones comunes:** Se revisa la lógica, la legibilidad del código, que no existan datos sensibles expuestos y que cumpla con los requisitos de la tarea.
 
+**Evidencia:**
+* **Número de PR:** #1
+* **Enlace:** [https://github.com/santiagojara/EVALUACION_1P/pull/152#issue-4228497942]
+![Imagen pull](imagenes/imagen11.png)
 ---
 
 ## Pregunta 5 (2 puntos)
@@ -189,7 +197,20 @@ Git Flow es una metodología excelente para proyectos de larga duración porque 
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
+**Procedimiento:**
+1. Se crearon las ramas `ramaA` y `ramaB` desde `develop`.
+2. Se creó un archivo `archivoA.txt` en ambas ramas con contenidos distintos para forzar el conflicto.
+3. Al intentar fusionar `ramaB` en `ramaA`, Git detectó que la misma línea fue modificada y marcó un conflicto.
+4. Se resolvió manualmente combinando los contenidos en VS Code.
+5. Se integró el resultado final en `develop` y se eliminaron las ramas auxiliares.
+![Creacion de Ramas](imagenes/imagen6.png)
+![Conflicto](imagenes/imagen7.png)
+
+**¿Qué es un conflicto?**
+Es una situación en la que Git no puede decidir automáticamente qué cambios conservar porque dos personas (o ramas) modificaron la misma parte de un archivo de formas diferentes. Ocurrió en este caso porque `archivoA.txt` tenía contenidos contradictorios en la misma línea.
+
+![Evidencia de Conflicto](imagenes/imagen5.png)
+
 
 ---
 
@@ -215,4 +236,13 @@ Git Flow es una metodología excelente para proyectos de larga duración porque 
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 6 -->
+**Explicación del proceso:**
+Se realizó una limpieza de los archivos temporales generados durante las pruebas de conflictos y gitignore (`archivoA.txt`, etc.). Se consolidaron todos los cambios de la rama `develop` hacia `main` y se crearon las etiquetas (tags) finales para marcar cada etapa de la evaluación. Finalmente, se sincronizaron las ramas locales con el repositorio remoto en GitHub.
+![Elimnar archivos temporales](imagenes/imagen8.png)
+![Tag](imagenes/imagen9.png)
+
+**Versionamiento Semántico (SemVer):**
+Es un estándar para nombrar versiones de software usando tres números: **MAJOR.MINOR.PATCH** (Ej: 1.2.3).
+* **MAJOR:** Cambios grandes que rompen la compatibilidad con versiones anteriores.
+* **MINOR:** Nuevas funcionalidades que no rompen nada (compatibles).
+* **PATCH:** Corrección de errores o bugs menores.
