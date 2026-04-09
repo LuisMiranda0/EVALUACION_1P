@@ -124,6 +124,7 @@ Debido a que la extensión git-flow no estaba disponible en el entorno local, se
 2. `git checkout -b feature/ingresar-encabezado` (Rama aislada para la tarea).
 3. `git add` y `git commit` (Persistencia de cambios).
 4. `git checkout develop` y `git merge feature/ingresar-encabezado` (Integración de la funcionalidad).
+![Comandos manuales](imagenes/imagen10.png)
 
 **Reflexión sobre Git Flow:**
 Git Flow es una metodología excelente para proyectos de larga duración porque establece un orden jerárquico. La rama `main` siempre es código estable, mientras que `develop` es el campo de juego para integrar nuevas funciones. Esto evita que errores en funciones experimentales afecten al usuario final o al código que ya funciona.
@@ -164,7 +165,7 @@ Git Flow es una metodología excelente para proyectos de larga duración porque 
 **Evidencia:**
 * **Número de PR:** #1
 * **Enlace:** [https://github.com/santiagojara/EVALUACION_1P/pull/152#issue-4228497942]
-
+![Imagen pull](imagenes/imagen11.png)
 ---
 
 ## Pregunta 5 (2 puntos)
